@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEDIPRO</title>
+
+    <link rel="stylesheet" href="/common-styles/general-styles.css">
+    <link rel="stylesheet" href="/common-styles/generator-form-styles.css">
+    <link rel="stylesheet" href="/common-styles/styles.css">
+    <link rel="stylesheet" href="/common-styles/buttons.css">
+    <link rel="stylesheet" href="/common-styles/typography.css">
+    <link rel="stylesheet" href="/common-styles/color-palette.css">
+</head>
+<body style="background-color: var(--color-primary-50)">
+    <div class="login-container" style="background-color: white;">
+        <img src="../images/logoDeSedipro.svg" alt="Logo de SEDIPRO" class="logo">
+        <h2 class="text-large-semibold">Crear cuenta</h2>
+        <form>
+            <div class="input-group">
+                <input type="text" placeholder="Nombres" required>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Apellidos" required>
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="Correo electrónico" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Contraseña" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Confirmar contraseña" required>
+            </div>
+
+            
+            <label class="custom-checkbox-container">
+                <input type="checkbox" class="custom-checkbox">
+                Acepto los términos y condiciones
+            </label>            
+
+            <a type="submit" href="/marketing/generate-certificate.html" class="button btn-giant btn-filled login-button">
+                Registrarse        
+            </a>
+            <div class="create-account">
+                <a href="/login.html">¿Ya tienes una cuenta?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

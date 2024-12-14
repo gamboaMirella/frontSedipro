@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEDIPRO</title>
+
+
+    <link rel="stylesheet" href="../common-styles/admin-dashboard-styles.css">
+    <link rel="stylesheet" href="../common-styles/general-styles.css">
+    <link rel="stylesheet" href="../common-styles/generator-form-styles.css">
+    <link rel="stylesheet" href="../common-styles/table-styles.css">
+    <link rel="stylesheet" href="../common-styles/styles.css">
+    <link rel="stylesheet" href="../common-styles/buttons.css">
+    <link rel="stylesheet" href="../common-styles/typography.css">
+    <link rel="stylesheet" href="../common-styles/color-palette.css">
+
+
+
+
+    <!-- PARA ICONOGRÁFIA -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMiSzw7Z3pObi/8/vZlJ/4xguZ5/AW/cHzD7ntg" crossorigin="anonymous">
+
+    <!-- PARA TIPOGRAFIA -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="background-color: var(--color-primary-50)">
+
+
+    <header id="admin-header" class="admin-container-fluid">
+        <a href="#" class="logo">
+            <img src="../images/logoDeSedipro.svg" alt="Logo de SEDIPRO">
+        </a>
+
+        <a href="#" class="perfil">
+            <img src="../images/perfil.png" alt="Perfil">
+        </a>
+
+    </header>
+
+    <main>
+        <div class="main-container" style="background-color: var(--color-primary-50);">
+
+            <div class="dashboard-container">
+                <!-- Menú lateral -->
+                <aside class="sidebar">
+                    <ul>
+                        <li><a href="/admin/admin-dashboard.html">Dashboard</a></li>
+                        <li><a href="/admin/certificate.html">Certificados</a></li>
+                        <li><a href="/admin/groups.html">Grupos</a></li>
+                        <li><a href="/admin/people.html">Personas</a></li>
+                        <li><a href="/admin/users.html">Usuarios</a></li>
+                        <li><a href="/admin/templates.html">Plantillas</a></li>
+                        <li class="active"><a href="/admin/logos.html">Logos</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Contenido principal -->
+                <section class="dashboard-content">
+                    <h2 class="h3">Logos</h2>
+
+
+                    <!-- ============RESPONSIVE TABLE============ -->
+
+                    <div class="general-table" style="width: 100%;">
+                        <div class="table-container">
+                            <div class="table-header">
+                                <div class="search-container">
+                                    <button class="filter-button">
+                                        <img src="../images/icons/icon-filter.svg" alt="Filtro" class="filter-icon">
+                                    </button>
+                                    <div class="search-box">
+                                        <img src="../images/icons/icon-search.svg" alt="Buscar" class="search-icon">
+                                        <input type="text" id="search" placeholder="Search...">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" id="select-all"></th>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Imagen</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <!-- Llenar los datos dinámicamente -->
+                                </tbody>
+                            </table>
+                            
+                            
+                            <div class="pagination">
+                                <span id="rows-info">1-10 de 20</span>
+                                <button class="btn-pagination" id="prev-page" disabled>&laquo; Anterior</button>
+                                <button class="btn-pagination" id="next-page">Siguiente &raquo;</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </section>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="/admin/logos.js"></script>
+</body>
+
+</html>

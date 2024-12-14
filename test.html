@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/common-styles/admin-dashboard-styles.css">
+  <link rel="stylesheet" href="/common-styles/general-styles.css">
+  <link rel="stylesheet" href="/common-styles/generator-form-styles.css">
+  <link rel="stylesheet" href="/common-styles/table-styles.css">
+  <link rel="stylesheet" href="/common-styles/styles.css">
+  <link rel="stylesheet" href="/common-styles/buttons.css">
+  <link rel="stylesheet" href="/common-styles/typography.css">
+  <link rel="stylesheet" href="/common-styles/color-palette.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!--  *************** POR REVISAR *************** -->
+  <div class="table-container">
+
+
+    <div class="table-header">
+      <div class="search-container">
+        <!-- Botón de Filtro -->
+        <button class="filter-button">
+          <img src="/images/icons/icon-filter.svg" alt="Filtro" class="filter-icon">
+        </button>
+
+        <!-- Barra de Búsqueda -->
+        <div class="search-box">
+          <img src="/images/icons/icon-search.svg" alt="Buscar" class="search-icon">
+          <input type="text" id="search" placeholder="Search...">
+        </div>
+      </div>
+
+
+      <div class="action-buttons">
+
+        <a href="#" class="button-action btn-small btn-outline">
+          <img src="/images/icons/icon-plus.svg" alt="Añadir personas">
+          Añadir personas
+        </a>
+
+        <a href="#" class="button-action btn-small btn-filled">
+          <img src="/images/icons/icon-upload.svg" alt="Cargar archivo">
+          Cargar archivo
+        </a>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th><input type="checkbox" id="select-all"></th> <!-- Checkbox para seleccionar todo -->
+        <th>#</th>
+        <th>NOMBRE</th>
+        <th>CORREO</th>
+        <th>ÁREA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- AGREGAR FILAS CON JavaScript -->
+    </tbody>
+  </table>
+  <div class="pagination">
+    <span id="rows-info">1-10 de 97</span>
+    <button class="btn-pagination" id="prev-page" disabled>&laquo; Anterior</button>
+    <button class="btn-pagination" id="next-page">Siguiente &raquo;</button>
+  </div>
+
+
+  <script src="test.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEDIPRO</title>
+
+    <link rel="stylesheet" href="/common-styles/general-styles.css">
+    <link rel="stylesheet" href="/common-styles/validate-certificate.css">
+    <link rel="stylesheet" href="/common-styles/generator-form-styles.css">
+    <link rel="stylesheet" href="/common-styles/styles.css">
+    <link rel="stylesheet" href="/common-styles/buttons.css">
+    <link rel="stylesheet" href="/common-styles/typography.css">
+    <link rel="stylesheet" href="/common-styles/color-palette.css">
+</head>
+
+<body style="background-color: var(--color-primary-50)">
+    <div class="validate-container">
+        <h2 class="title-text-validate-container">Validar certificado</h2>
+        <form id="certificateForm" onsubmit="return false;">
+            <span class="text-validate-input-title">Ingrese código de certificado</span>
+
+            <div class="search-box">
+                <img src="/images/icons/icon-search.svg" alt="Buscar" class="search-icon">
+                <input type="text" id="search" placeholder="D2I4-2ED3-283F-27SP">
+            </div>
+
+            <div id="statusMessage" class="status-message"></div>
+        </form>
+    </div>
+
+    <!-- Ventana Modal -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <h3 class="text-large-semibold">Detalles del certificado</h3>
+            <div class="box-details-modal">
+                <span class="detail-text" id="firstName">Juan</span>
+            </div>
+            <div class="box-details-modal">
+                <span class="detail-text" id="lastName">Pérez</span>
+            </div>
+            <div class="box-details-modal">
+                <span class="detail-text" id="certification">Certificación por: Desarrollo Web</span>
+            </div>
+            <div class="box-details-modal">
+                <span class="detail-text" id="issueDate">Fecha de emisión: 2024-11-23</span>
+            </div>
+
+            <div class="button-container">
+                <button type="button" id="close-modal" class="button btn-small btn-filled">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/validate-certificate.js"></script>
+</body>
+
+</html>

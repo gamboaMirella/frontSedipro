@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEDIPRO</title>
+
+
+  <link rel="stylesheet" href="../common-styles/admin-dashboard-styles.css">
+  <link rel="stylesheet" href="../common-styles/general-styles.css">
+  <link rel="stylesheet" href="../common-styles/generator-form-styles.css">
+  <link rel="stylesheet" href="../common-styles/table-styles.css">
+  <link rel="stylesheet" href="../common-styles/styles.css">
+  <link rel="stylesheet" href="../common-styles/buttons.css">
+  <link rel="stylesheet" href="../common-styles/typography.css">
+  <link rel="stylesheet" href="../common-styles/color-palette.css">
+
+
+  <!-- PARA ICONOGRÁFIA -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMiSzw7Z3pObi/8/vZlJ/4xguZ5/AW/cHzD7ntg" crossorigin="anonymous">
+
+  <!-- PARA TIPOGRAFIA -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="background-color: var(--color-primary-50)">
+
+
+  <header id="header" class="container-fluid">
+    <a href="#" class="logo">
+      <img src="../images/logoDeSedipro.svg" alt="Logo de SEDIPRO">
+    </a>
+
+    <a href="#" class="perfil">
+      <img src="../images/perfil.png" alt="Perfil">
+    </a>
+
+    <!-- *******************BOTON FLOTANTE*********************** -->
+    <a href="../validar-certificado.html" target="_blank" class="floating-button">
+      <img src="../images/icons/validate-certificate.svg" alt="Validar certificado">
+    </a>  
+
+  </header>
+
+  <main>
+    <div class="main-container" style="background-color: var(--color-primary-50);">
+
+      <div> <!-- TITULO -->
+        <h3 class="h2">
+          Generación de certificados
+        </h3>
+      </div>
+
+      <div class="certificate-generator-container"> 
+        <div class="certificate-preview-container">
+          <img src="../images/exampleCertificates/defaultCertificate.png" alt="Ejemplo de certificado"
+            class="cover-certificate-container">
+        </div>
+
+        <form class="form-general-data"> 
+          <div class="form-dropdown-row"> 
+            <div class="dropdown"> <!-- PLANTILLA -->
+              <div class="dropdown-button"> <!-- Select -->
+                <span class="dropdown-text-selected">Seleccionar plantilla</span> <!-- Selected -->
+                <div class="dropdown-caret">      </div>
+              </div>
+          
+              <ul class="dropdown-menu">
+                <li>Evento SEDIPRO</li>
+                <li>Taller SEDIPRO</li><!-- active -->
+                <li>Reconocimiento SEDIPRO</li>
+              </ul>
+            </div>
+
+            <div class="dropdown"> <!-- GRUPO -->
+              <div class="dropdown-button"> <!-- Select -->
+                <span class="dropdown-text-selected">Seleccionar grupo</span> <!-- Selected -->
+                <div class="dropdown-caret">      </div>
+              </div>
+          
+              <ul class="dropdown-menu"> <!-- Menu -->
+                <li><a href="/marketing/create-group.html">Crear nuevo grupo</a></li>
+                <li>Ponencia SCRUM 2024</li>
+                <li>Taller de habilidades blandas</li>
+                <li>Capacitación en TI</li>
+              </ul>
+            </div>
+          </div>
+
+          
+          
+
+          <div class="formHorizontalRule"></div>
+
+          <span class="dropdown-text-title">Firma N°.1 (Predeterminada)</span>
+
+          <div class="form-dropdown-row"> <!-- FIRMA N.  -->
+            <div class="dropdown"> <!-- NOMBRE -->
+              <div class="dropdown-button"> 
+                <span class="dropdown-text-selected">Presidente de SEDIPRO</span> <!-- Selected -->
+                
+              </div>
+            </div>
+          </div>
+
+
+          
+          <span class="dropdown-text-title">Firma N°.2</span>
+
+          <div class="form-dropdown-row"> <!-- FIRMA N.  -->
+            <div class="dropdown"> <!-- NOMBRE -->
+              <div class="dropdown-button"> 
+                <span class="dropdown-text-selected">Seleccionar nombre</span> <!-- Selected -->
+                <div class="dropdown-caret">      </div>
+              </div>
+          
+              <ul class="dropdown-menu">
+                <li>Christian Morales</li>
+                <li>Luis Quiroz</li>
+                <li>Mario Juarez</li>
+              </ul>
+            </div>
+
+            <div class="dropdown"> <!-- ROL -->              
+              <div class="dropdown-button"> 
+                <span class="dropdown-text-selected">Seleccionar rol</span> <!-- Selected -->
+                <div class="dropdown-caret">      </div>
+              </div>
+          
+              <ul class="dropdown-menu"> <!-- Menu -->
+                <li>Secretario(a) general</li>
+                <li>Director de Finanza</li>
+                <li>Director de TI</li>
+              </ul>
+            </div>
+          </div>
+
+          <span class="dropdown-text-title">Firma N°.3</span>
+
+          <div class="form-dropdown-row"> <!-- FIRMA N.  -->
+            <div class="dropdown"> <!-- NOMBRE -->
+              <div class="dropdown-button"> 
+                <span class="dropdown-text-selected">Seleccionar nombre</span> <!-- Selected -->
+                <div class="dropdown-caret">      </div>
+              </div>
+          
+              <ul class="dropdown-menu">
+                <li>Christian Morales</li>
+                <li>Luis Quiroz</li>
+                <li>Mario Juarez</li>
+              </ul>
+            </div>
+
+            <div class="dropdown"> <!-- ROL -->              
+              <div class="dropdown-button"> 
+                <span class="dropdown-text-selected">Seleccionar rol</span> <!-- Selected -->
+                <div class="dropdown-caret">      </div>
+              </div>
+          
+              <ul class="dropdown-menu"> <!-- Menu -->
+                <li>Secretario(a) general</li>
+                <li>Director de Finanza</li>
+                <li>Director de TI</li>
+              </ul>
+            </div>
+          </div>
+
+          <span class="dropdown-text-title">Firma N°.4</span>
+
+          <div class="form-dropdown-row"> <!-- FIRMA N.  -->
+            <div class="dropdown"> <!-- NOMBRE -->
+              <div class="dropdown-button"> 
+                <span class="dropdown-text-selected">Seleccionar nombre</span> <!-- Selected -->
+                <div class="dropdown-caret">      </div>
+              </div>
+          
+              <ul class="dropdown-menu">
+                <li>Christian Morales</li>
+                <li>Luis Quiroz</li>
+                <li>Mario Juarez</li>
+              </ul>
+            </div>
+
+            <div class="dropdown"> <!-- ROL -->              
+              <div class="dropdown-button"> 
+                <span class="dropdown-text-selected">Seleccionar rol</span> <!-- Selected -->
+                <div class="dropdown-caret">      </div>
+              </div>
+          
+              <ul class="dropdown-menu"> <!-- Menu -->
+                <li>Secretario(a) general</li>
+                <li>Director de Finanza</li>
+                <li>Director de TI</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ***************************BOTONES ***************************-->
+
+          <div class="button-container" style="margin: 30px auto;">
+            <a href="#" class="button btn-large btn-outline">
+              Guardar           
+            </a>  
+            <a href="#" class="button btn-large btn-filled">
+              Limpiar         
+            </a>
+        </div>
+
+        </form>
+
+        
+
+      </div>
+
+    </div>
+  </main>
+
+
+  <script src="/marketing/generator-form.js"></script>
+</body>
+
+</html>

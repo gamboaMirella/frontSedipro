@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEDIPRO</title>
+
+
+  <link rel="stylesheet" href="../common-styles/create-group.css">
+  <link rel="stylesheet" href="../common-styles/admin-dashboard-styles.css">
+  <link rel="stylesheet" href="../common-styles/general-styles.css">
+  <link rel="stylesheet" href="../common-styles/generator-form-styles.css">
+  <link rel="stylesheet" href="../common-styles/table-styles.css">
+  <link rel="stylesheet" href="../common-styles/styles.css">
+  <link rel="stylesheet" href="../common-styles/buttons.css">
+  <link rel="stylesheet" href="../common-styles/typography.css">
+  <link rel="stylesheet" href="../common-styles/color-palette.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+  <!-- PARA ICONOGRÁFIA -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMiSzw7Z3pObi/8/vZlJ/4xguZ5/AW/cHzD7ntg" crossorigin="anonymous">
+
+  <!-- PARA TIPOGRAFIA -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="background-color: var(--color-primary-50)">
+
+
+  <header id="header" class="container-fluid">
+    <a href="#" class="logo">
+      <img src="../images/logoDeSedipro.svg" alt="Logo de SEDIPRO">
+    </a>
+
+    <a href="#" class="perfil">
+      <img src="../images/perfil.png" alt="Perfil">
+    </a>
+
+    <!-- *******************BOTON FLOTANTE*********************** -->
+    <a href="../validate-certificate.html" target="_blank" class="floating-button">
+      <img src="../images/icons/validate-certificate.svg" alt="Validar certificado">
+    </a>
+
+  </header>
+
+  <main>
+    <div class="main-container" style="background-color: var(--color-primary-50);">
+
+      <div> <!-- TITULO -->
+        <h3 class="h2">
+          Crear nuevo grupo
+        </h3>
+      </div>
+
+      <div class="certificate-generator-container">
+        <!-- ============RESPONSIVE TABLE============ -->
+
+        <div class="general-table" style="width: 100%;">
+          <!--  *************** POR REVISAR *************** -->
+          <div class="table-container">
+            <div class="table-header">
+              <div class="search-container">
+                <!-- Botón de Filtro -->
+                <button class="filter-button">
+                  <img src="../images/icons/icon-filter.svg" alt="Filtro" class="filter-icon">
+                </button>
+
+                <!-- Barra de Búsqueda -->
+                <div class="search-box">
+                  <img src="../images/icons/icon-search.svg" alt="Buscar" class="search-icon">
+                  <input type="text" id="search" placeholder="Search...">
+                </div>
+              </div>
+
+
+              <div class="action-buttons">
+
+                <a href="#" class="button-action btn-small btn-outline" id="open-modal">
+                  <img src="../images/icons/icon-plus.svg" alt="Añadir personas">
+                  Añadir personas
+                </a>
+
+
+                <div id="modal" class="modal hidden">
+                  <div class="modal-content">
+                    <form id="addPersonForm">
+                      <h3 class="text-large-semibold">Agregar persona</h3>
+                      <div class="input-group-modal">
+                        <input type="text" placeholder="Nombres" required>
+                      </div>
+                      <div class="input-group-modal">
+                        <input type="text" placeholder="Apellidos" required>
+                      </div>
+                      <div class="input-group-modal">
+                        <input type="email" placeholder="Correo electrónico" required>
+                      </div>
+
+                      <div class="dropdown" style=" margin-top: 10px;"> <!-- NOMBRE -->
+                        <div class="dropdown-button"
+                          style=" background-color: var(--color-primary-50); height: 56px; border: none;">
+                          <!-- Select -->
+                          <span class="dropdown-text-selected">Seleccionar</span> <!-- Selected -->
+                          <div class="dropdown-caret"> </div>
+                        </div>
+
+                        <ul class="dropdown-menu">
+                          <li>Evento SEDIPRO</li>
+                          <li>Taller SEDIPRO</li><!-- active -->
+                          <li>Reconocimiento SEDIPRO</li>
+
+                          <li>Reconocimiento SEDIPRO</li>
+                        </ul>
+                      </div>
+
+                      <div class="button-container" style="margin: 30px auto;">
+                        <button type="submit" class="button btn-small btn-outline">
+                          Guardar
+                        </button>
+                        <button type="button" id="close-modal" class="button btn-small btn-filled">
+                          Cerrar
+                        </button>
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+
+                <a href="#" class="button-action btn-small btn-filled">
+                  <img src="../images/icons/icon-upload.svg" alt="Cargar archivo">
+                  Cargar archivo
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th><input type="checkbox" id="select-all"></th> <!-- Checkbox para seleccionar todo -->
+                <th>#</th>
+                <th>NOMBRE</th>
+                <th>CORREO</th>
+                <th>ÁREA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- AGREGAR FILAS CON JavaScript -->
+            </tbody>
+          </table>
+          <div class="pagination">
+            <span id="rows-info">1-10 de 97</span>
+            <button class="btn-pagination" id="prev-page" disabled>&laquo; Anterior</button>
+            <button class="btn-pagination" id="next-page">Siguiente &raquo;</button>
+          </div>
+
+        </div>
+
+        <form class="form-general-data" style="max-width: 320px;"> <!-- ============FORMULARIO============ -->
+
+          <span class="search-dropdown-title">Nombre</span>
+          <div class="search-dropdown">
+            <div class="search-dropdown-button">
+              <span class="search-dropdown-text-selected">Seleccionar</span>
+              <div class="search-dropdown-caret"></div>
+            </div>
+
+            <div class="search-dropdown-menu">
+              <!-- Input de búsqueda -->
+              <div class="search-dropdown-search-container">
+                <img src="../images/icons/icon-search.svg" alt="Buscar" class="search-icon" style="width: 35px;">
+                <input type="text" class="search-dropdown-input" placeholder="Buscar..." id="searchDropdownInput" />
+              </div>
+              <ul class="search-dropdown-options" id="searchDropdownOptions">
+                <li>Evento SEDIPRO</li>
+                <li>Taller SEDIPRO</li>
+                <li>Reconocimiento SEDIPRO</li>                
+              </ul>
+            </div>
+          </div>
+
+
+          <span class="dropdown-text-title">Tipo</span>
+          <div class="dropdown">
+            <div class="dropdown-button">
+              <span class="dropdown-text-selected">Seleccionar</span>
+              <div class="dropdown-caret"></div>
+            </div>
+            <ul class="dropdown-menu">
+              <li>Directiva</li>
+              <li>Director(a) de proyecto</li>
+              <li>Egresado</li>
+              <li>Ponente</li>
+              <li>Taller</li>
+              <li>Voluntario</li>
+            </ul>
+          </div>
+
+
+
+          <div class="text-input-container-modal"><!-- CAJA PARA DESCRIPCIÓN -->
+            <span class="text-input-title">Descripción</span> <!-- Etiqueta -->
+            <div class="text-input-wrapper">
+              <input type="text" class="text-input" placeholder="Escribe aquí..." />
+            </div>
+          </div>
+
+          <!--============= Caja para la selección de fechas ===========================-->
+          <div>
+            <label for="datepicker">Fecha:</label>
+            <input type="text" id="datepicker" placeholder="Selecciona una fecha">
+          </div>
+
+
+
+          <!-- ***************************BOTONES ***************************-->
+          <div class="button-container" style="margin: 30px auto;">
+            <a href="#" class="button btn-large btn-outline">
+              Guardar
+            </a>
+            <a href="#" class="button btn-large btn-filled">
+              Limpiar
+            </a>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </main>
+
+  <script src="/marketing/generator-form.js"></script>
+  <script src="/marketing/create-group.js"></script>
+  <script src="/marketing/form-create-group.js"></script>
+
+</body>
+
+</html>
